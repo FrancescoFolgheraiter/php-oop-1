@@ -8,7 +8,7 @@ class Movie {
     public $cover;
     public $originalLanguage;
     //funzione costruttore da implementare
-    function __construct($_title, $_genre, $_yearReleas, $_cover = null, $_originalLanguage = null) 
+    function __construct($_title, $_genre =[], $_yearReleas = null, $_cover = null, $_originalLanguage = null) 
     {
         $this->title = $_title;
         $this->genre = $_genre;
@@ -22,7 +22,7 @@ class Movie {
 }
 $film1 = new Movie('Oppenheimer','documentary','2023');
 var_dump($film1);
-$film2 = new Movie('Lei','dystopian','2013');
+$film2 = new Movie('Lei',['dystopian',"comedy"],'2013');
 var_dump($film2);
 var_dump($film2->getTitleYear())
 ?>
