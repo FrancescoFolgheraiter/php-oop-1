@@ -1,4 +1,30 @@
 <?php
+//classe movie
+class Movie {
+    //variabili d'istanza
+    public $title;
+    public $genre;
+    public $yearReleas;
+    public $cover;
+    public $originalLanguage;
+    //funzione costruttore da implementare
+    function __construct($_title, $_genre, $_yearReleas, $_cover = null, $_originalLanguage = null) 
+    {
+        $this->title = $_title;
+        $this->genre = $_genre;
+        $this->yearReleas = $_yearReleas;
+        $this->cover = $_cover;
+        $this->originalLanguage = $_originalLanguage;
+    }
+    public function getTitleYear(){
+        return $this->title.' '.$this->yearReleas;
+    }
+}
+$film1 = new Movie('Oppenheimer','documentary','2023');
+var_dump($film1);
+$film2 = new Movie('Lei','dystopian','2013');
+var_dump($film2);
+var_dump($film2->getTitleYear())
 ?>
 <!DOCTYPE html>
 <html lang="en">
